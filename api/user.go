@@ -7,8 +7,10 @@ import (
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
 	"mbShopApi/global/response"
+	"mbShopApi/global/utils/timeutil"
 	"mbShopApi/proto"
 	"net/http"
+	"time"
 )
 
 var (
@@ -55,7 +57,7 @@ func GetUserList(c *gin.Context) {
 			Id:       v.Id,
 			Mobile:   v.Mobile,
 			NickName: v.NickName,
-			Birthday: v.Birthday,
+			Birthday: timeutil.JsonTime(time.Unix(int64(v.Birthday), 0)),
 			Gender:   v.Gender,
 			Role:     v.Role,
 		}
