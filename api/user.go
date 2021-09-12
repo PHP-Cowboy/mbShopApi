@@ -6,6 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
+	"mbShopApi/global"
 	"mbShopApi/global/response"
 	"mbShopApi/global/utils/timeutil"
 	"mbShopApi/proto"
@@ -13,25 +14,21 @@ import (
 	"time"
 )
 
-var (
-	conn       *grpc.ClientConn
-	userClient proto.UserClient
-	ip         = "127.0.0.1"
-	port       = 50051
-)
+func InitConn() proto.UserClient {
+	srvInfo := global.ServerConfig.UserSrvInfo
 
-func init() {
-	var err error
-	conn, err = grpc.Dial(fmt.Sprintf("%s:%d", ip, port), grpc.WithInsecure())
+	conn, err := grpc.Dial(fmt.Sprintf("%s:%d", srvInfo.Host, srvInfo.Port), grpc.WithInsecure())
 
 	if err != nil {
 		zap.S().Panic("err:" + err.Error())
 	}
 
-	userClient = proto.NewUserClient(conn)
+	return proto.NewUserClient(conn)
 }
 
 func GetUserList(c *gin.Context) {
+
+	userClient := InitConn()
 
 	rsp, err := userClient.GetUserList(context.Background(), &proto.PageInfo{
 		Pn:    0,
