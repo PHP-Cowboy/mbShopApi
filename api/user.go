@@ -3,12 +3,18 @@ package api
 import (
 	"context"
 	"fmt"
+	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/codes"
+	"google.golang.org/grpc/status"
+	"mbShopApi/forms"
 	"mbShopApi/global"
 	"mbShopApi/global/response"
 	"mbShopApi/global/utils/timeutil"
+	"mbShopApi/middlewares"
+	"mbShopApi/models"
 	"mbShopApi/proto"
 	"net/http"
 	"time"
@@ -64,5 +70,67 @@ func GetUserList(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"data": userList,
 	})
+
+}
+
+func PasswordLogin(c *gin.Context) {
+	var form = forms.LoginForm{}
+	err := c.ShouldBind(&form)
+
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"msg": err.Error(),
+		})
+		return
+	}
+	//登录逻辑
+	userClient := InitConn()
+	if rsp, err := userClient.GetUserByMobile(context.Background(), &proto.MobileRequest{Mobile: form.Mobile}); err != nil {
+		switch status.Code(err) {
+		case codes.NotFound:
+			c.JSON(http.StatusNotFound, gin.H{
+				"msg": "用户不存在",
+			})
+		default:
+			c.JSON(http.StatusInternalServerError, gin.H{
+				"msg": "登录失败:" + err.Error(),
+			})
+		}
+	} else {
+		if passRsp, passErr := userClient.CheckPassword(context.Background(), &proto.PasswordCheckInfo{
+			Password:          form.Password,
+			EncryptedPassword: rsp.Password,
+		}); passErr == nil && passRsp.Status {
+			j := middlewares.NewJWT()
+			timeStamp := time.Now().Unix()
+			claims := models.CustomClaims{
+				ID:          rsp.Id,
+				NickName:    rsp.NickName,
+				AuthorityId: rsp.Role,
+				StandardClaims: jwt.StandardClaims{
+					NotBefore: timeStamp,
+					ExpiresAt: timeStamp * 60 * 60 * 24,
+					Issuer:    "cowboy",
+				},
+			}
+			token, err := j.CreateToken(claims)
+			if err != nil {
+				c.JSON(http.StatusInternalServerError, gin.H{
+					"msg": "token生成失败",
+				})
+				return
+			}
+			c.JSON(http.StatusOK, gin.H{
+				"id":        rsp.Id,
+				"nickName":  rsp.NickName,
+				"expiresAt": timeStamp * 60 * 60 * 24 * 1000,
+				"token":     token,
+			})
+		} else {
+			c.JSON(http.StatusInternalServerError, gin.H{
+				"msg": "登录失败",
+			})
+		}
+	}
 
 }

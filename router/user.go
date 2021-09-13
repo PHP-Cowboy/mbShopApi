@@ -7,4 +7,5 @@ import (
 
 func InitUserRouter(r *gin.RouterGroup) {
 	r.GET("list", api.GetUserList)
+	r.POST("pwd_login", api.PasswordLogin)
 }

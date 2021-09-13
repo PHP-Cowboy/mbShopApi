@@ -2,9 +2,12 @@ package main
 
 import (
 	"fmt"
+	"github.com/gin-gonic/gin/binding"
+	"github.com/go-playground/validator/v10"
 	"go.uber.org/zap"
 	"mbShopApi/global"
 	"mbShopApi/initialize"
+	validator2 "mbShopApi/validator"
 )
 
 func main() {
@@ -16,9 +19,17 @@ func main() {
 	//初始化router
 	r := initialize.InitRouter()
 
-	port := global.ServerConfig.Port
+	//初始化验证器
+	v, ok := binding.Validator.Engine().(*validator.Validate)
 
-	fmt.Println()
+	if ok {
+		err := v.RegisterValidation("mobile", validator2.ValidateMobile)
+		if err != nil {
+			panic(err)
+		}
+	}
+
+	port := global.ServerConfig.Port
 
 	zap.S().Infof("启动服务器，端口：%d", port)
 

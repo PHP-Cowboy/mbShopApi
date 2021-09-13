@@ -1,5 +1,9 @@
 name: 'user-web'
 port: 9000
+
 userSrv:
   host: '127.0.0.1'
   port: 50051
+
+jwt:
+  key: "3WEraPIv!myZlYR&vQzoCMx5RtX3uhgL"
