@@ -11,18 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7c0dcf7-1791-4b06-a104-aefc87b4d0a3" name="默认的" comment="viper 读取 yaml 配置">
-      <change afterPath="$PROJECT_DIR$/middlewares/jwt.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/request.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/validator/validators.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/captcha.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/router/base.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-pro.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config-pro.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forms/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/forms/user.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/router/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/initialize/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/initialize/router.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +32,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="$PROJECT_DIR$/../go_dev/go" />
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -49,13 +45,14 @@
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.全局.GOPATH.is.expanded" value="true" />
     <property name="configurable.模块.GOPATH.is.expanded" value="false" />
     <property name="configurable.项目.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/proto" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
@@ -71,9 +68,9 @@
       <module name="mbShopApi" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/main.go" />
       <package value="mbShopApi" />
       <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -112,67 +109,5 @@
         <entry key="GOPROXY" value="https://goproxy.cn,https://goproxy.io,direct" />
       </map>
     </environment>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="424" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1631459691034">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state x="424" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631459691034" />
-    <state x="866" y="380" key="EnvironmentVariablesDialog" timestamp="1631190820427">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state x="866" y="380" key="EnvironmentVariablesDialog/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631190820427" />
-    <state width="1878" height="303" key="GridCell.Tab.0.bottom" timestamp="1631550931948">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="1878" height="303" key="GridCell.Tab.0.bottom/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631550931948" />
-    <state width="1878" height="303" key="GridCell.Tab.0.center" timestamp="1631550931947">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="1878" height="303" key="GridCell.Tab.0.center/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631550931947" />
-    <state width="1878" height="303" key="GridCell.Tab.0.left" timestamp="1631550931946">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="1878" height="303" key="GridCell.Tab.0.left/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631550931946" />
-    <state width="1878" height="303" key="GridCell.Tab.0.right" timestamp="1631550931948">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="1878" height="303" key="GridCell.Tab.0.right/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631550931948" />
-    <state width="1878" height="326" key="GridCell.Tab.1.bottom" timestamp="1631542537078">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="1878" height="326" key="GridCell.Tab.1.bottom/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631542537078" />
-    <state width="1878" height="326" key="GridCell.Tab.1.center" timestamp="1631542537076">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="1878" height="326" key="GridCell.Tab.1.center/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631542537076" />
-    <state width="1878" height="326" key="GridCell.Tab.1.left" timestamp="1631542537076">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="1878" height="326" key="GridCell.Tab.1.left/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631542537076" />
-    <state width="1878" height="326" key="GridCell.Tab.1.right" timestamp="1631542537077">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="1878" height="326" key="GridCell.Tab.1.right/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631542537077" />
-    <state x="461" y="150" key="SettingsEditor" timestamp="1631191088293">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state x="461" y="150" key="SettingsEditor/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631191088293" />
-    <state x="560" y="251" key="Vcs.Push.Dialog.v2" timestamp="1631464412583">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state x="560" y="251" key="Vcs.Push.Dialog.v2/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631464412583" />
-    <state width="960" height="488" key="XDebugger.FullValuePopup" timestamp="1631206987160">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="960" height="488" key="XDebugger.FullValuePopup/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631206987160" />
-    <state x="-1180" y="123" width="1080" height="577" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1631536471666">
-      <screen x="-1280" y="23" width="1280" height="777" />
-    </state>
-    <state x="-1180" y="123" width="1080" height="577" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1280.23.1280.777/0.23.1920.977@-1280.23.1280.777" timestamp="1631536471666" />
-    <state x="775" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1631464399800">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state x="775" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631464399800" />
   </component>
 </project>

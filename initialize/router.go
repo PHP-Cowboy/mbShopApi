@@ -10,7 +10,10 @@ func InitRouter() *gin.Engine {
 
 	apiGroup := r.Group("/u/v1")
 
+	baseGroup := r.Group("/b/v1")
+
 	router.InitUserRouter(apiGroup)
+	router.InitBaseRouter(baseGroup)
 
 	return r
 }

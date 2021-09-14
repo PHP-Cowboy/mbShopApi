@@ -83,6 +83,15 @@ func PasswordLogin(c *gin.Context) {
 		})
 		return
 	}
+
+	//校验验证码
+	if !store.Verify(form.CaptchaId, form.Captcha, true) {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"msg": "验证码错误",
+		})
+		return
+	}
+
 	//登录逻辑
 	userClient := InitConn()
 	if rsp, err := userClient.GetUserByMobile(context.Background(), &proto.MobileRequest{Mobile: form.Mobile}); err != nil {
