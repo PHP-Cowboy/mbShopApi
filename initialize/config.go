@@ -31,7 +31,6 @@ func InitConfig() {
 		panic(err)
 	}
 
-	fmt.Println(global.ServerConfig)
 
 	//go func() {
 	//	v.WatchConfig()
