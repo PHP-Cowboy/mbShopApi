@@ -16,6 +16,8 @@ func main() {
 	//初始化配置
 	initialize.InitConfig()
 
+	zap.S().Info(global.ServerConfig)
+
 	//初始化router
 	r := initialize.InitRouter()
 

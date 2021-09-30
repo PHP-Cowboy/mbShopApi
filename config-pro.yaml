@@ -2,17 +2,17 @@ name: 'user-web'
 port: 9000
 
 userSrv:
-  host: '127.0.0.1'
+  host: '192.168.3.253'
   port: 50051
 
 jwt:
   key: "3WEraPIv!myZlYR&vQzoCMx5RtX3uhgL"
 
 
-host: '127.0.0.1'
-port: 8848
-namespace: 'c1872978-d51c-4188-a497-4e0cd20b97d5'
-user: 'nacos'
-password: 'nacos'
-dataid: 'user-web.json'
-group: 'pro'
+#host: '127.0.0.1'
+#port: 8848
+#namespace: 'c1872978-d51c-4188-a497-4e0cd20b97d5'
+#user: 'nacos'
+#password: 'nacos'
+#dataid: 'user-web.json'
+#group: 'pro'

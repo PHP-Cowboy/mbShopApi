@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -11,8 +14,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7c0dcf7-1791-4b06-a104-aefc87b4d0a3" name="默认的" comment="自定义验证器 &amp;&amp; jwt">
+      <change beforePath="$PROJECT_DIR$/.idea/mbShopApi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mbShopApi.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/initialize/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/initialize/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-pro.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config-pro.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +33,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file://$PROJECT_DIR$/../Go" />
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../../go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -44,7 +51,9 @@
     <property name="configurable.全局.GOPATH.is.expanded" value="true" />
     <property name="configurable.模块.GOPATH.is.expanded" value="false" />
     <property name="configurable.项目.GOPATH.is.expanded" value="true" />
+    <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
+    <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
@@ -62,14 +71,14 @@
       <module name="mbShopApi" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/main.go" />
       <package value="mbShopApi" />
       <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go 构建.go build mbShopApi" />
+        <item itemvalue="Go Build.go build mbShopApi" />
       </list>
     </recent_temporary>
   </component>
@@ -103,43 +112,5 @@
         <entry key="GOPROXY" value="https://goproxy.cn,https://goproxy.io,direct" />
       </map>
     </environment>
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1878" height="326" key="GridCell.Tab.0.bottom" timestamp="1631799990766">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="1878" height="326" key="GridCell.Tab.0.bottom/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631799990766" />
-    <state width="1878" height="326" key="GridCell.Tab.0.center" timestamp="1631799990765">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="1878" height="326" key="GridCell.Tab.0.center/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631799990765" />
-    <state width="1878" height="326" key="GridCell.Tab.0.left" timestamp="1631799990765">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="1878" height="326" key="GridCell.Tab.0.left/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631799990765" />
-    <state width="1878" height="326" key="GridCell.Tab.0.right" timestamp="1631799990766">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="1878" height="326" key="GridCell.Tab.0.right/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631799990766" />
-    <state width="1878" height="326" key="GridCell.Tab.1.bottom" timestamp="1631799990768">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="1878" height="326" key="GridCell.Tab.1.bottom/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631799990768" />
-    <state width="1878" height="326" key="GridCell.Tab.1.center" timestamp="1631799990767">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="1878" height="326" key="GridCell.Tab.1.center/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631799990767" />
-    <state width="1878" height="326" key="GridCell.Tab.1.left" timestamp="1631799990767">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="1878" height="326" key="GridCell.Tab.1.left/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631799990767" />
-    <state width="1878" height="326" key="GridCell.Tab.1.right" timestamp="1631799990768">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state width="1878" height="326" key="GridCell.Tab.1.right/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631799990768" />
-    <state x="461" y="150" key="SettingsEditor" timestamp="1631799969159">
-      <screen x="0" y="23" width="1920" height="977" />
-    </state>
-    <state x="461" y="150" key="SettingsEditor/-1280.23.1280.777/0.23.1920.977@0.23.1920.977" timestamp="1631799969159" />
   </component>
 </project>
