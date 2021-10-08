@@ -18,6 +18,8 @@ func main() {
 
 	zap.S().Info(global.ServerConfig)
 
+	initialize.InitUserClient()
+
 	//初始化router
 	r := initialize.InitRouter()
 

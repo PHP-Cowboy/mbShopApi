@@ -1,6 +1,8 @@
 package response
 
-import "mbShopApi/global/utils/timeutil"
+import (
+	"mbShopApi/utils/timeutil"
+)
 
 type UserList struct {
 	Total uint32      `json:"total"` //总条数

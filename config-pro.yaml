@@ -2,12 +2,16 @@ name: 'user-web'
 port: 9000
 
 userSrv:
-  host: '192.168.3.253'
+  host: '127.0.0.1'
   port: 50051
+  name: 'user-srv'
 
 jwt:
   key: "3WEraPIv!myZlYR&vQzoCMx5RtX3uhgL"
 
+consul:
+  host: '192.168.0.101'
+  port: 8500
 
 #host: '127.0.0.1'
 #port: 8848

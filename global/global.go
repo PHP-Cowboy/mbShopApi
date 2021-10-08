@@ -1,7 +1,12 @@
 package global
 
-import "mbShopApi/config"
+import (
+	"mbShopApi/config"
+	"mbShopApi/proto"
+)
 
 var (
-	ServerConfig *config.ServerConfig = &config.ServerConfig{}
+	ServerConfig = &config.ServerConfig{}
+
+	UserClient proto.UserClient
 )

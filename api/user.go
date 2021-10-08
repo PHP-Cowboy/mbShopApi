@@ -2,41 +2,25 @@ package api
 
 import (
 	"context"
-	"fmt"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
-	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"mbShopApi/forms"
 	"mbShopApi/global"
 	"mbShopApi/global/response"
-	"mbShopApi/global/utils/timeutil"
 	"mbShopApi/middlewares"
 	"mbShopApi/models"
 	"mbShopApi/proto"
+	"mbShopApi/utils/timeutil"
 	"net/http"
 	"time"
 )
 
-func InitConn() proto.UserClient {
-	srvInfo := global.ServerConfig.UserSrvInfo
-
-	conn, err := grpc.Dial(fmt.Sprintf("%s:%d", srvInfo.Host, srvInfo.Port), grpc.WithInsecure())
-
-	if err != nil {
-		zap.S().Panic("err:" + err.Error())
-	}
-
-	return proto.NewUserClient(conn)
-}
-
 func GetUserList(c *gin.Context) {
 
-	userClient := InitConn()
-
-	rsp, err := userClient.GetUserList(context.Background(), &proto.PageInfo{
+	rsp, err := global.UserClient.GetUserList(context.Background(), &proto.PageInfo{
 		Pn:    0,
 		PSize: 10,
 	})
@@ -93,7 +77,7 @@ func PasswordLogin(c *gin.Context) {
 	}
 
 	//登录逻辑
-	userClient := InitConn()
+	userClient := global.UserClient
 	if rsp, err := userClient.GetUserByMobile(context.Background(), &proto.MobileRequest{Mobile: form.Mobile}); err != nil {
 		switch status.Code(err) {
 		case codes.NotFound:
