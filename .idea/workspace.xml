@@ -14,11 +14,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7c0dcf7-1791-4b06-a104-aefc87b4d0a3" name="默认的" comment="自定义验证器 &amp;&amp; jwt">
-      <change beforePath="$PROJECT_DIR$/.idea/mbShopApi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mbShopApi.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/initialize/srv_conn.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/addr/addr.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/user.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config-pro.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config-pro.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global/global.go" beforeDir="false" afterPath="$PROJECT_DIR$/global/global.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global/response/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/global/response/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global/utils/timeutil/time.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/timeutil/time.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +52,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable..is.expanded" value="false" />
+    <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
     <property name="configurable.全局.GOPATH.is.expanded" value="true" />
     <property name="configurable.模块.GOPATH.is.expanded" value="false" />
     <property name="configurable.项目.GOPATH.is.expanded" value="true" />
@@ -56,17 +62,18 @@
     <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/middlewares" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/proto" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/middlewares" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Build.go build mbShopApi/utils/addr">
     <configuration name="go build mbShopApi" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="mbShopApi" />
       <working_directory value="$PROJECT_DIR$" />
@@ -76,8 +83,18 @@
       <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
+    <configuration name="go build mbShopApi/utils/addr" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="mbShopApi" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="mbShopApi/utils/addr" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/utils/addr/addr.go" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build mbShopApi/utils/addr" />
         <item itemvalue="Go Build.go build mbShopApi" />
       </list>
     </recent_temporary>
